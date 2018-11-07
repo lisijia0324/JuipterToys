@@ -1,0 +1,74 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4972046701,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.setupTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Successful contact request",
+        "description": "",
+        "id": "contact-page-tests;successful-contact-request",
+        "after": [
+          {
+            "result": {
+              "duration": 671808076,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.cleanupTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 464823710,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "An user submits feedback",
+            "match": {
+              "location": "ContactSteps.userSubmitsFeedback()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1036023454,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user sees a successful message",
+            "match": {
+              "location": "FeedbackSteps.userSeesASuccessfulMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SunnyDay"
+          }
+        ]
+      }
+    ],
+    "name": "Contact Page Tests",
+    "description": "",
+    "id": "contact-page-tests",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/ContactFeature.feature",
+    "tags": []
+  }
+]
