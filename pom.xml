@@ -76,16 +76,10 @@
       <version>4.0.0</version>
     </dependency>
     <dependency>
-    <groupId>org.aeonbits.owner</groupId>
-    <artifactId>owner</artifactId>
-    <version>1.0.8</version>
-  </dependency>
-      <dependency>
-          <groupId>org.testng</groupId>
-          <artifactId>testng</artifactId>
-          <version>7.0.0-beta1</version>
-          <scope>test</scope>
-      </dependency>
+      <groupId>org.aeonbits.owner</groupId>
+      <artifactId>owner</artifactId>
+      <version>1.0.8</version>
+    </dependency>
   </dependencies>
 
   <build>
