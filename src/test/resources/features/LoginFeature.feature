@@ -10,9 +10,6 @@ Feature: Login Page Tests
     Given An user login without term agreement
     Then User sees the error message
 
-  @SunnyDay
-  Scenario: Successful log out
-    Given An user log out
-    
+
 
 
