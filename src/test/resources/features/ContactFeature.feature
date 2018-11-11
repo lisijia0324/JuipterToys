@@ -9,3 +9,4 @@ Feature: Contact Page Tests
   Scenario: Failed contact request
     Given An user submits feedback without required details
     Then user sees a error message
+

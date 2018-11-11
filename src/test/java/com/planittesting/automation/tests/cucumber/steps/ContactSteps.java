@@ -3,7 +3,6 @@ package com.planittesting.automation.tests.cucumber.steps;
 import com.planittesting.automation.model.pages.ContactPage;
 import com.planittesting.automation.model.pages.HomePage;
 import com.planittesting.automation.tests.cucumber.World;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.WebDriver;
 
