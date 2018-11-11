@@ -19,6 +19,8 @@ public class LoginDialog {
         rootElement.findElement(By.id("loginPassword")).sendKeys(password);
     }
 
+    public void checkTerm() {rootElement.findElement(By.id("agree")).click(); }
+
     public void clickLoginButton() {
         rootElement.findElement(By.className("btn-primary")).click();
     }

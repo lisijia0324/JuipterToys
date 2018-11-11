@@ -1,6 +1,6 @@
 Feature: Login Page Tests
 
-  @SunnyDay
+  @SunnyDay @Debug
   Scenario: Successful login request
     Given An user login with correct credential
     Then User sees the login account

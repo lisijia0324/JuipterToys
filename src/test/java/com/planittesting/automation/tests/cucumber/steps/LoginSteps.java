@@ -21,8 +21,17 @@ public class LoginSteps {
         LoginDialog loginDialog = homePage.clickLoginMenu();
         loginDialog.setUserName("test");
         loginDialog.setPassword("letmein");
+        loginDialog.checkTerm();
         loginDialog.clickLoginButton();
     }
 
 
+    @Given("^An user login without term agreement$")
+    public void anUserLoginWithoutTermAgreement() {
+        HomePage homePage = new HomePage(driver);
+        LoginDialog loginDialog = homePage.clickLoginMenu();
+        loginDialog.setUserName("test");
+        loginDialog.setPassword("letmein");
+        loginDialog.clickLoginButton();
+    }
 }
