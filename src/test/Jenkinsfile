@@ -1,0 +1,35 @@
+
+
+#!Groovy
+
+pipeline{
+    agent any
+
+    stages{
+        stage('Test') {
+            steps{
+                echo 'This is Build stage'
+                bat 'mvn package'
+            }
+        }
+    }
+    post{
+        success{
+            echo 'Test successed!'
+            script {
+                //Mail
+                // mail(bcc: '',
+                //      body: "Run ${JOB_NAME}-#${BUILD_NUMBER} succeeded. To get more details, visit the build results page: ${BUILD_URL}.",
+                //      from: 'jenkins-admin@gmail.com',
+                //      replyTo: '',
+                //      subject: "${JOB_NAME} ${BUILD_NUMBER} succeeded",
+                //      to: 'lisijia0324@gmail.com')
+                // Cucumber Report
+                cucumber fileIncludePattern: '**/jupiterToysAutomation/target/cucumber-report.json', sortingMethod: 'ALPHABETICAL'
+            }
+        }
+        failure {
+            echo 'Test failed!'
+        }
+    }
+}
