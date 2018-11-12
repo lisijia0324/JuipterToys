@@ -31,7 +31,7 @@ public class LoginSteps {
         HomePage homePage = new HomePage(driver);
         LoginDialog loginDialog = homePage.clickLoginMenu();
         loginDialog.setUserName("test");
-        loginDialog.setPassword("letmein");
-        loginDialog.clickLoginButton();
+//        loginDialog.setPassword("letmein");
+//        loginDialog.clickLoginButton();
     }
 }
