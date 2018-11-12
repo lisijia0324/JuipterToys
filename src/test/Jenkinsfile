@@ -1,7 +1,5 @@
 
 
-#!Groovy
-
 pipeline{
     agent any
 
