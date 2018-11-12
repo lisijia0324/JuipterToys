@@ -6,7 +6,140 @@
         "before": [
           {
             "result": {
-              "duration": 4949090019,
+              "duration": 5009012418,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.setupTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Successful contact request",
+        "description": "",
+        "id": "contact-page-tests;successful-contact-request",
+        "after": [
+          {
+            "result": {
+              "duration": 781938770,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.cleanupTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 493637538,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "An user submits feedback",
+            "match": {
+              "location": "ContactSteps.userSubmitsFeedback()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10480313225,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user sees a successful message",
+            "match": {
+              "location": "FeedbackSteps.userSeesASuccessfulMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SunnyDay"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3996809259,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.setupTest()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Failed contact request",
+        "description": "",
+        "id": "contact-page-tests;failed-contact-request",
+        "after": [
+          {
+            "result": {
+              "duration": 804450794,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.cleanupTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 213670170,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "An user submits feedback without required details",
+            "match": {
+              "location": "ContactSteps.userSubmitsFeedbackWithoutRequiredDetails()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 112780649,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user sees a error message",
+            "match": {
+              "location": "FeedbackSteps.userSeesAErrorMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RainyDay"
+          }
+        ]
+      }
+    ],
+    "name": "Contact Page Tests",
+    "description": "",
+    "id": "contact-page-tests",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/ContactFeature.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3981900627,
               "status": "passed"
             },
             "match": {
@@ -21,7 +154,7 @@
         "after": [
           {
             "result": {
-              "duration": 751933876,
+              "duration": 819676084,
               "status": "passed"
             },
             "match": {
@@ -34,7 +167,7 @@
         "steps": [
           {
             "result": {
-              "duration": 422395128,
+              "duration": 402063727,
               "status": "passed"
             },
             "line": 5,
@@ -46,7 +179,7 @@
           },
           {
             "result": {
-              "duration": 51156727,
+              "duration": 35108434,
               "status": "passed"
             },
             "line": 6,
@@ -63,6 +196,64 @@
           },
           {
             "name": "@Debug"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4017873703,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.setupTest()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Failed login request without term agreement",
+        "description": "",
+        "id": "login-page-tests;failed-login-request-without-term-agreement",
+        "after": [
+          {
+            "result": {
+              "duration": 814462021,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ScenarioSetup.cleanupTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 153089781,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "An user login without term agreement",
+            "match": {
+              "location": "LoginSteps.anUserLoginWithoutTermAgreement()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "User sees the error message",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RunnyDay"
           }
         ]
       }
