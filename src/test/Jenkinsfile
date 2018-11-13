@@ -24,6 +24,7 @@ pipeline{
                 //      to: 'lisijia0324@gmail.com')
                 // Cucumber Report
                 cucumber fileIncludePattern: '**/jupiterToysAutomation/target/cucumber-report.json', sortingMethod: 'ALPHABETICAL'
+                junit testDataPublishers: [[$class: 'AutomateTestDataPublisher']], testResults: 'target/surefire-reports/TEST-*.xml'
             }
         }
         failure {
