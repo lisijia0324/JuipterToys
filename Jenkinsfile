@@ -1,13 +1,25 @@
-
+#!/usr/bin/env groovy
 
 pipeline{
     agent any
 
     stages{
+        stage{
+            steps{
+                echo 'This is Clean Project stage'
+                bat 'mvn clean'
+            }
+        }
         stage('Test stage') {
             steps{
                 echo 'This is TEST stage'
-                bat 'mvn clean test'
+                bat 'mvn test -Dsurefire.useFile=false'
+            }
+        }
+        stage('Package stage'){
+            steps{
+                echo 'This is Package stage'
+                bat 'mvn package'
             }
         }
     }
