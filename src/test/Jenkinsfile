@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Test stage') {
             steps{
-                echo 'This is Build stage'
+                echo 'This is TEST stage'
                 bat 'mvn clean test'
             }
         }
