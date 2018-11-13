@@ -6,204 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 5428201896,
-              "status": "passed"
-            },
-            "match": {
-              "location": "ScenarioSetup.setupTest()"
-            }
-          }
-        ],
-        "line": 4,
-        "name": "Successful contact request",
-        "description": "",
-        "id": "contact-page-tests;successful-contact-request",
-        "after": [
-          {
-            "result": {
-              "duration": 514887042,
-              "status": "passed"
-            },
-            "match": {
-              "location": "ScenarioSetup.cleanupTest(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 553818506,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "An user submits feedback",
-            "match": {
-              "location": "ContactSteps.userSubmitsFeedback()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 6805258888,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user sees a successful message",
-            "match": {
-              "location": "FeedbackSteps.userSeesASuccessfulMessage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@SunnyDay"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 4466798197,
-              "status": "passed"
-            },
-            "match": {
-              "location": "ScenarioSetup.setupTest()"
-            }
-          }
-        ],
-        "line": 9,
-        "name": "Failed contact request",
-        "description": "",
-        "id": "contact-page-tests;failed-contact-request",
-        "after": [
-          {
-            "result": {
-              "duration": 513791076,
-              "status": "passed"
-            },
-            "match": {
-              "location": "ScenarioSetup.cleanupTest(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 195805720,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "An user submits feedback without required details",
-            "match": {
-              "location": "ContactSteps.userSubmitsFeedbackWithoutRequiredDetails()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 113956293,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user sees a error message",
-            "match": {
-              "location": "FeedbackSteps.userSeesAErrorMessage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@RainyDay"
-          }
-        ]
-      }
-    ],
-    "name": "Contact Page Tests",
-    "description": "",
-    "id": "contact-page-tests",
-    "keyword": "Feature",
-    "uri": "src/test/resources/features/ContactFeature.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 4655428218,
-              "status": "passed"
-            },
-            "match": {
-              "location": "ScenarioSetup.setupTest()"
-            }
-          }
-        ],
-        "line": 4,
-        "name": "Successful login request",
-        "description": "",
-        "id": "login-page-tests;successful-login-request",
-        "after": [
-          {
-            "result": {
-              "duration": 513060089,
-              "status": "passed"
-            },
-            "match": {
-              "location": "ScenarioSetup.cleanupTest(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 406091863,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "An user login with correct credential",
-            "match": {
-              "location": "LoginSteps.anUserLoginWithCorrectCredential()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 40963525,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "User sees the login account",
-            "match": {
-              "location": "FeedbackSteps.userSeesTheLoginAccount()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@SunnyDay"
-          },
-          {
-            "name": "@Debug"
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 4490871406,
+              "duration": 5161844656,
               "status": "passed"
             },
             "match": {
@@ -218,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 513434835,
+              "duration": 516957656,
               "status": "passed"
             },
             "match": {
@@ -231,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 259694569,
+              "duration": 344814416,
               "status": "passed"
             },
             "line": 10,
@@ -243,17 +46,23 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 42130430,
+              "status": "passed"
             },
             "line": 11,
             "name": "User sees the error message",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.userSeesTheErrorMessage()"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
             "name": "@RunnyDay"
+          },
+          {
+            "name": "@Debug"
           }
         ]
       }
