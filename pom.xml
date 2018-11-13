@@ -10,10 +10,11 @@
 
   <name>jupiterToysAutomation</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url></url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32</webdriver.chrome>
   </properties>
 
   <dependencies>
@@ -22,16 +23,6 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>3.14.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-chrome-driver</artifactId>
-      <version>2.5.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-firefox-driver</artifactId>
-      <version>2.6.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
     <dependency>
@@ -138,6 +129,9 @@
           <version>2.18.1</version>
           <configuration>
             <testFailureIgnore>true</testFailureIgnore>
+            <systemPropertyVariables>
+              <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
+            </systemPropertyVariables>
           </configuration>
         </plugin>
         <plugin>
