@@ -16,7 +16,7 @@ pipeline{
             echo 'Test successed!'
             script {
                 // Cucumber Report
-                cucumber fileIncludePattern: '**/jupiterToysAutomation/target/cucumber-report.json', sortingMethod: 'ALPHABETICAL'
+                cucumber fileIncludePattern: '**/jupiterToysAutomation/target/cucumber.json', sortingMethod: 'ALPHABETICAL'
             }
         }
         failure {
