@@ -7,7 +7,7 @@ pipeline{
         stage('Test stage') {
             steps{
                 echo 'This is Build stage'
-                bat 'mvn clean test -Dwebdriver.chrome.driver=C:/Users/lisij/Downloads/jar files/chromedriver_win32/chromedriver.exe'
+                bat 'mvn clean test -Dwebdriver.chrome.driver=${PATH}'
             }
         }
     }
