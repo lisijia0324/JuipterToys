@@ -1,14 +1,13 @@
 package com.planittesting.automation.tests.cucumber.steps;
 
+import com.planittesting.automation.model.dialogs.LoginDialog;
 import com.planittesting.automation.model.pages.ContactPage;
 import com.planittesting.automation.model.pages.HomePage;
 import com.planittesting.automation.tests.cucumber.World;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FeedbackSteps {
 

@@ -1,9 +1,11 @@
 package com.planittesting.automation.model.dialogs;
 
+import com.planittesting.automation.model.pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class LoginDialog {
+
 
     protected WebElement rootElement;
 
@@ -21,7 +23,10 @@ public class LoginDialog {
 
     public void checkTerm() {rootElement.findElement(By.id("agree")).click(); }
 
+    public String getLoginError() { return rootElement.findElement(By.id("login-error")).getText(); }
+
     public void clickLoginButton() {
         rootElement.findElement(By.className("btn-primary")).click();
     }
+
 }
