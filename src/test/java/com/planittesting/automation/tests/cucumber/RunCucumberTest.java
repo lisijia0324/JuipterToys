@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
 //        tags = "@Debug",
         glue = "com.planittesting.automation.tests",
-        plugin = {"pretty", "html:target/cucumber-reports","json:target/cucumber.json" }
+        plugin = {"pretty", "html:target/cucumber","json:target/cucumber.json" }
 )
 public class RunCucumberTest {
 }
