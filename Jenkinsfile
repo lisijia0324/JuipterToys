@@ -4,7 +4,7 @@ pipeline{
     agent any
 
     stages{
-        stage{
+        stage('Clean stage'){
             steps{
                 echo 'This is Clean Project stage'
                 bat 'mvn clean'
