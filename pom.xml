@@ -14,7 +14,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32\chromdriver.exe</webdriver.chrome>
+      <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32\chromedriver.exe</webdriver.chrome>
       <webdriver.ie>C:\Users\lisij\Downloads\jar files\IEDriverServer_Win32_3.14.0</webdriver.ie>
   </properties>
 
