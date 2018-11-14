@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class World {
 
-    private DriverManager driverManager = DriverManagerFactory.getManager(DriverType.IE);
+    private DriverManager driverManager = DriverManagerFactory.getManager(DriverType.FIREFOX);
     private WebDriver driver;
     private Environment testEnvironment;
     protected static Properties systemProps;
