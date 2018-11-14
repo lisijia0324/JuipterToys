@@ -8,6 +8,10 @@ pipeline{
             steps{
                 echo 'This is Clean Project stage'
                 bat 'mvn clean verify'
+                def v = version()
+                if (v) {
+                    echo "Building version ${v}"
+                }
             }
         }
         stage('Test stage') {
@@ -26,10 +30,9 @@ pipeline{
     post{
         success{
             echo 'Test succeed!'
-            steps {
+            scripts {
                 // Cucumber Report
                 cucumber fileIncludePattern: '**/*.json'
-                [$class: 'JUnitResultArchiver',testResults: '**/target/surefire-reports/TEST-*.xml']
             }
         }
         failure {
