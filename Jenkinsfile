@@ -29,7 +29,7 @@ pipeline{
             steps {
                 // Cucumber Report
                 cucumber fileIncludePattern: '**/*.json'
-                testResults: '**/target/surefire-reports/TEST-*.xml'
+                [$class: 'JUnitResultArchiver',testResults: '**/target/surefire-reports/TEST-*.xml']
             }
         }
         failure {
