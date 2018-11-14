@@ -6,7 +6,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class IEDriverManager extends DriverManager {
 
     private InternetExplorerDriverService ieService;
-//    static final String IE_OPTIONS = "se:ieOptions";
 
     @Override
     protected void startService() {
@@ -39,7 +38,8 @@ public class IEDriverManager extends DriverManager {
         capabilities.setCapability(InternetExplorerDriver.UNEXPECTED_ALERT_BEHAVIOR, "accept");
         capabilities.setCapability("ignoreProtectedModeSettings", true);
         capabilities.setCapability("disable-popup-blocking", true);
-
-        driver = new InternetExplorerDriver();
+        InternetExplorerOptions ieOption = new InternetExplorerOptions();
+        ieOption.merge(capabilities);
+        driver = new InternetExplorerDriver(ieOption);
     }
 }
