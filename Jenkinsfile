@@ -7,7 +7,7 @@ pipeline{
         stage('Clean stage'){
             steps{
                 echo 'This is Clean Project stage'
-                bat 'mvn clean'
+                bat 'mvn clean verify'
             }
         }
         stage('Test stage') {
@@ -26,9 +26,10 @@ pipeline{
     post{
         success{
             echo 'Test succeed!'
-            script {
+            steps {
                 // Cucumber Report
                 cucumber fileIncludePattern: '**/*.json'
+                testResults: '**/target/surefire-reports/TEST-*.xml'
             }
         }
         failure {
