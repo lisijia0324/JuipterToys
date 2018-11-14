@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Failed login request without term agreement",
+  "name": "Successful login request",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@RunnyDay"
+      "name": "@SunnyDay"
     },
     {
       "name": "@Debug"
@@ -21,21 +21,21 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "An user login without term agreement",
+  "name": "An user login with correct credential",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "LoginSteps.anUserLoginWithoutTermAgreement()"
+  "location": "LoginSteps.anUserLoginWithCorrectCredential()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User sees the error message",
+  "name": "User sees the login account",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginSteps.userSeesTheErrorMessage()"
+  "location": "FeedbackSteps.userSeesTheLoginAccount()"
 });
 formatter.result({
   "status": "passed"

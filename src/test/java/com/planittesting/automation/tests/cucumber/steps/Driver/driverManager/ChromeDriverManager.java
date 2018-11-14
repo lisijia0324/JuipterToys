@@ -31,7 +31,7 @@ public class ChromeDriverManager extends DriverManager {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("test-type");
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-//        driver = new ChromeDriver(chService, capabilities);
-        driver = new ChromeDriver();
+        options.merge(capabilities);
+        driver = new ChromeDriver(options);
     }
 }

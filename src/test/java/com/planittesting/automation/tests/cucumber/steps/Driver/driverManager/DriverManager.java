@@ -10,6 +10,7 @@ public abstract class DriverManager {
 
     public void quitDriver() {
         if (null != driver) {
+            driver.quit();
             stopService();
             driver = null;
         }
@@ -21,4 +22,5 @@ public abstract class DriverManager {
             createDriver();
         }
         return driver;
-    }}
+    }
+}

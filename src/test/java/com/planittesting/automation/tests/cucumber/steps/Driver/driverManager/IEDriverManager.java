@@ -33,9 +33,13 @@ public class IEDriverManager extends DriverManager {
         DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
         capabilities.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
         capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION,true);
-//        InternetExplorerOptions options = new InternetExplorerOptions();
-//        options.addArguments("test-type");
-//        capabilities.setCapability(IE_OPTIONS, options);
-        driver = new InternetExplorerDriver(ieService, capabilities);
+        capabilities.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING,true);
+        capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
+        capabilities.setCapability(InternetExplorerDriver.NATIVE_EVENTS,false);
+        capabilities.setCapability(InternetExplorerDriver.UNEXPECTED_ALERT_BEHAVIOR, "accept");
+        capabilities.setCapability("ignoreProtectedModeSettings", true);
+        capabilities.setCapability("disable-popup-blocking", true);
+
+        driver = new InternetExplorerDriver();
     }
 }

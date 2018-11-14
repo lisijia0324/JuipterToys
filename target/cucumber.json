@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 5161844656,
+              "duration": 5222457431,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 9,
-        "name": "Failed login request without term agreement",
+        "line": 4,
+        "name": "Successful login request",
         "description": "",
-        "id": "login-page-tests;failed-login-request-without-term-agreement",
+        "id": "login-page-tests;successful-login-request",
         "after": [
           {
             "result": {
-              "duration": 516957656,
+              "duration": 1382714171,
               "status": "passed"
             },
             "match": {
@@ -34,32 +34,32 @@
         "steps": [
           {
             "result": {
-              "duration": 344814416,
+              "duration": 426456678,
               "status": "passed"
             },
-            "line": 10,
-            "name": "An user login without term agreement",
+            "line": 5,
+            "name": "An user login with correct credential",
             "match": {
-              "location": "LoginSteps.anUserLoginWithoutTermAgreement()"
+              "location": "LoginSteps.anUserLoginWithCorrectCredential()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 42130430,
+              "duration": 42211651,
               "status": "passed"
             },
-            "line": 11,
-            "name": "User sees the error message",
+            "line": 6,
+            "name": "User sees the login account",
             "match": {
-              "location": "LoginSteps.userSeesTheErrorMessage()"
+              "location": "FeedbackSteps.userSeesTheLoginAccount()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@RunnyDay"
+            "name": "@SunnyDay"
           },
           {
             "name": "@Debug"

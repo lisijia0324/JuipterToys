@@ -14,9 +14,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class World {
 
-    private DriverManager driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
+    private DriverManager driverManager = DriverManagerFactory.getManager(DriverType.IE);
     private WebDriver driver;
-//    private Environment testEnvironment = ConfigFactory.create(Environment.class);
     private Environment testEnvironment;
     protected static Properties systemProps;
 
