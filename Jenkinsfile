@@ -17,12 +17,12 @@ pipeline{
                 bat 'mvn test -Dsurefire.useFile=false  -Dbrowser = CHROME'
             }
         }
-        stage('Package stage'){
-            steps{
-                echo 'This is Package stage'
-                bat 'mvn package'
-            }
-        }
+//        stage('Package stage'){
+//            steps{
+//                echo 'This is Package stage'
+//                bat 'mvn package'
+//            }
+//        }
     }
     post{
         success{
