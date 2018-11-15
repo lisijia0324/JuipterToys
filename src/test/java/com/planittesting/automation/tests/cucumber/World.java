@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class World {
 
-    DriverType browserType = DriverType.valueOf(System.getProperty("env.BROWSER"));
+    DriverType browserType = DriverType.valueOf(System.getProperty("browser"));
     private DriverManager driverManager = DriverManagerFactory.getManager(browserType);
 
     private WebDriver driver;
