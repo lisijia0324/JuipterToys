@@ -1,10 +1,9 @@
 package com.planittesting.automation.tests.cucumber;
 
 import org.aeonbits.owner.Config;
-import org.aeonbits.owner.ConfigFactory;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "file:${mypath}/environmentProperties/${env}.properties"
 })
 
 public interface Environment extends Config {

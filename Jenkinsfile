@@ -8,16 +8,13 @@ pipeline{
             steps{
                 echo 'This is Clean Project stage'
                 bat 'mvn clean verify'
-                def v = version()
-                if (v) {
-                    echo "Building version ${v}"
-                }
+
             }
         }
         stage('Test stage') {
             steps{
                 echo 'This is TEST stage'
-                bat 'mvn test -Dsurefire.useFile=false'
+                bat 'mvn test -Dsurefire.useFile=false  -Denv.BROWSER = CHROME'
             }
         }
         stage('Package stage'){

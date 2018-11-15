@@ -5,6 +5,7 @@ import com.planittesting.automation.tests.cucumber.steps.Driver.DriverManagerFac
 import com.planittesting.automation.tests.cucumber.steps.Driver.DriverType;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class World {
 
-    private DriverManager driverManager = DriverManagerFactory.getManager(DriverType.FIREFOX);
+    DriverType browserType = DriverType.valueOf(System.getProperty("env.BROWSER"));
+    private DriverManager driverManager = DriverManagerFactory.getManager(browserType);
+
     private WebDriver driver;
     private Environment testEnvironment;
     protected static Properties systemProps;
@@ -31,6 +34,23 @@ public class World {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.navigate().to("http://jupiter2.cloud.planittesting.com/");
 //        driver.navigate().to(testEnvironment.url());
+    }
+
+    public WebDriver setDriverManger(){
+        DesiredCapabilities[] browsers = {DesiredCapabilities.chrome(), DesiredCapabilities.internetExplorer(),
+                DesiredCapabilities.firefox()};
+        for (DesiredCapabilities browser: browsers){
+            System.out.println("Test in Browser: " + browser.getBrowserName());
+            if (browser.getBrowserName().equals("chrome")){
+                this.driver = DriverManagerFactory.getManager(DriverType.CHROME).getDriver();
+                return driver;
+            }
+            else if (browser.getBrowserName().equals("firefox")){
+                this.driver = DriverManagerFactory.getManager(DriverType.FIREFOX).getDriver();
+                return driver;
+            }
+        }
+        return null;
     }
 
 

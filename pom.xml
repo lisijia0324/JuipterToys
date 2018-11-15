@@ -14,9 +14,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32\chromedriver.exe</webdriver.chrome>
-      <webdriver.ie>C:\Users\lisij\Downloads\jar files\IEDriverServer_Win32_3.14.0\IEDriverServer.exe</webdriver.ie>
-      <webdriver.gecko>C:\Users\lisij\Downloads\jar files\geckodriver-v0.23.0-win32\geckodriver.exe</webdriver.gecko>
+    <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32\chromedriver.exe</webdriver.chrome>
+    <webdriver.ie>C:\Users\lisij\Downloads\jar files\IEDriverServer_Win32_3.14.0\IEDriverServer.exe</webdriver.ie>
+    <webdriver.gecko>C:\Users\lisij\Downloads\jar files\geckodriver-v0.23.0-win32\geckodriver.exe</webdriver.gecko>
+    <env.BROWSER>${env.BROWSER}</env.BROWSER>
   </properties>
 
   <dependencies>
@@ -135,6 +136,7 @@
               <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
               <webdriver.ie.driver>${webdriver.ie}</webdriver.ie.driver>
               <webdriver.gecko.driver>${webdriver.gecko}</webdriver.gecko.driver>
+              <browser>${env.BROWSER}</browser>
             </systemPropertyVariables>
           </configuration>
         </plugin>

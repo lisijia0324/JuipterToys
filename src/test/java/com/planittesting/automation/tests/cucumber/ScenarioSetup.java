@@ -32,5 +32,4 @@ public class ScenarioSetup {
 
         world.quitDriver();
     }
-
 }
