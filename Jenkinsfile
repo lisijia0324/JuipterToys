@@ -14,7 +14,7 @@ pipeline{
         stage('Test stage') {
             steps{
                 echo 'This is TEST stage'
-                bat 'mvn test -Dtest=BrowserTest -DartifactId=jupiterToysAutomation -Dbrowser=CHROME'
+                bat 'mvn test -Dtest=BrowserTest -DartifactId=jupiterToysAutomation -Dbrowser=CHROME -DfailIfNoTests=false'
             }
         }
 //        stage('Package stage'){
