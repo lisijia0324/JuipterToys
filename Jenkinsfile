@@ -17,12 +17,12 @@ pipeline{
                 bat 'mvn test -Dtest=BrowserTest -DartifactId=jupiterToysAutomation -Dbrowser=CHROME -DfailIfNoTests=false'
             }
         }
-//        stage('Package stage'){
-//            steps{
-//                echo 'This is Package stage'
-//                bat 'mvn package'
-//            }
-//        }
+        stage('Package stage'){
+            steps{
+                echo 'This is Package stage'
+                bat 'mvn package'
+            }
+        }
     }
     post{
         success{
