@@ -7,14 +7,14 @@ pipeline{
         stage('Clean stage'){
             steps{
                 echo 'This is Clean Project stage'
-                bat 'mvn clean verify'
+                bat 'mvn clean'
 
             }
         }
         stage('Test stage') {
             steps{
                 echo 'This is TEST stage'
-                bat 'mvn test -Dsurefire.useFile=false  -Dbrowser = CHROME'
+                bat 'mvn install test -Dsurefire.useFile=false  -Dbrowser = CHROME'
             }
         }
 //        stage('Package stage'){
