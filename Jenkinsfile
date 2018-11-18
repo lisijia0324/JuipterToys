@@ -14,7 +14,7 @@ pipeline{
         stage('Test stage') {
             steps{
                 echo 'This is TEST stage'
-                bat 'mvn install test -Dsurefire.useFile=false  -Dbrowser = CHROME'
+                bat 'mvn compiler:compile -Dsurefire.useFile=false  -Dbrowser = CHROME'
             }
         }
 //        stage('Package stage'){
