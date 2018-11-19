@@ -125,13 +125,16 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.18.1</version>
           <configuration>
-            <testFailureIgnore>true</testFailureIgnore>
+            <!--<testFailureIgnore>true</testFailureIgnore>-->
             <systemPropertyVariables>
               <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
               <webdriver.ie.driver>${webdriver.ie}</webdriver.ie.driver>
               <webdriver.gecko.driver>${webdriver.gecko}</webdriver.gecko.driver>
               <browser>${browser}</browser>
             </systemPropertyVariables>
+            <includes>
+              <include>**/*RunCucumberTest.java</include>
+            </includes>
           </configuration>
         </plugin>
         <plugin>

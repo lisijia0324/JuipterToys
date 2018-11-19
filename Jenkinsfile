@@ -14,7 +14,7 @@ pipeline{
         stage('Test stage') {
             steps{
                 echo 'This is TEST stage'
-                bat 'mvn test -Dtest=BrowserTest -DartifactId=jupiterToysAutomation -Dbrowser=CHROME -DfailIfNoTests=false'
+                bat 'mvn test -Dbrowser=CHROME'
             }
         }
         stage('Package stage'){
@@ -25,16 +25,4 @@ pipeline{
             }
         }
     }
-//    post{
-//        success{
-//            echo 'Test succeed!'
-//            steps {
-//                // Cucumber Report
-//                cucumber fileIncludePattern: '**/*.json'
-//            }
-//        }
-//        failure {
-//            echo 'Test failed!'
-//        }
-//    }
 }
