@@ -21,6 +21,7 @@ pipeline{
             steps{
                 echo 'This is Package stage'
                 bat 'mvn package'
+                cucumber fileIncludePattern: '**/*.json'
             }
         }
     }
