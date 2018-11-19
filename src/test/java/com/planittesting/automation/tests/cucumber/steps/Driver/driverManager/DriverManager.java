@@ -1,6 +1,9 @@
 package com.planittesting.automation.tests.cucumber.steps.Driver.driverManager;
 
 import org.openqa.selenium.WebDriver;
+
+import java.util.concurrent.TimeUnit;
+
 public abstract class DriverManager {
 
     protected WebDriver driver;
@@ -20,6 +23,9 @@ public abstract class DriverManager {
         if (null == driver) {
             startService();
             createDriver();
+            driver.manage().deleteAllCookies();
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         return driver;
     }

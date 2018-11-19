@@ -3,7 +3,8 @@ package com.planittesting.automation.tests.cucumber;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "file:${mypath}/environmentProperties/${env}.properties"
+//        "file:${mypath}/environmentProperties/${env}.properties"
+        "classpath:qa.properties"
 })
 
 public interface Environment extends Config {
