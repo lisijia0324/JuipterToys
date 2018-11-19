@@ -24,16 +24,16 @@ pipeline{
             }
         }
     }
-    post{
-        success{
-            echo 'Test succeed!'
-            steps {
-                // Cucumber Report
-                cucumber fileIncludePattern: '**/*.json'
-            }
-        }
-        failure {
-            echo 'Test failed!'
-        }
-    }
+//    post{
+//        success{
+//            echo 'Test succeed!'
+//            steps {
+//                // Cucumber Report
+//                cucumber fileIncludePattern: '**/*.json'
+//            }
+//        }
+//        failure {
+//            echo 'Test failed!'
+//        }
+//    }
 }
