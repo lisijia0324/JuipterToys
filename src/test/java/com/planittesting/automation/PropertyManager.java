@@ -13,7 +13,7 @@ public class PropertyManager {
         try{
             Properties properties = new Properties();
 
-            File propertyFile = new File(Constants.PROPERTY_FILE_PATH);
+            File propertyFile = new File(Constants.QA_PROPERTY_FILE_PATH);
             InputStream is = new FileInputStream(propertyFile);
             properties.load(is);
 

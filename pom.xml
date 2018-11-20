@@ -171,8 +171,8 @@
     </pluginManagement>
     <resources>
       <resource>
-        <directory>src/main/resources</directory>
-        <filtering>false</filtering>
+        <directory>src/main/resources/environmentProperties</directory>
+        <filtering>true</filtering>
       </resource>
     </resources>
   </build>
