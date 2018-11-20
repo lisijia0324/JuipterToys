@@ -1,12 +1,7 @@
 package com.planittesting.automation.tests.cucumber.JUnitTests;
 
-import com.planittesting.automation.tests.cucumber.Environment;
-import cucumber.runtime.Env;
-import org.aeonbits.owner.ConfigFactory;
-import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 

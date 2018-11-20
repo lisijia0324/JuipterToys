@@ -7,7 +7,7 @@ pipeline{
         stage('Clean stage'){
             steps{
                 echo 'This is Clean Project stage'
-                bat 'mvn clean'
+                bat 'mvn clean -Dbrowser=CHROME'
 
             }
         }

@@ -16,7 +16,7 @@ public class ScenarioSetup {
     }
 
     @Before
-    public void setupTest(){
+    public void setupTest() throws Exception {
         world.setDriver();
         world.launchJupiterToysTests();
     }
