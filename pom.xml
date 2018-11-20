@@ -17,7 +17,7 @@
     <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32\chromedriver.exe</webdriver.chrome>
     <webdriver.ie>C:\Users\lisij\Downloads\jar files\IEDriverServer_Win32_3.14.0\IEDriverServer.exe</webdriver.ie>
     <webdriver.gecko>C:\Users\lisij\Downloads\jar files\geckodriver-v0.23.0-win32\geckodriver.exe</webdriver.gecko>
-    <browser>${browser}</browser>
+    <browser>CHROME</browser>
   </properties>
 
   <dependencies>
