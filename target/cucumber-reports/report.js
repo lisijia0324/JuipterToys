@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/LoginFeature.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/ShopFeature.feature");
 formatter.feature({
-  "name": "Login Page Tests",
+  "name": "Shop Page and Cart Page Tests",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Successful login request",
+  "name": "Successful order selected product",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -31,11 +31,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User sees the login account",
-  "keyword": "Then "
+  "name": "the user put order for selected product",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "FeedbackSteps.userSeesTheLoginAccount()"
+  "location": "ShopSteps.theUserPutOrderForSelectedProduct()"
 });
 formatter.result({
   "status": "passed"

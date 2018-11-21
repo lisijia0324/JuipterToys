@@ -29,7 +29,7 @@ public class ShopTestSuit extends BaseTestSuit {
         ShopPage shopPage = new ShopPage(driver);
         shopPage.getProduct(p->p.getPrice()==10.99).clickBuyButton();
 
-        assertEquals("1", shopPage.getCartCount());
+        assertEquals(1, shopPage.getCartCount());
     }
 
     @Test
@@ -40,6 +40,6 @@ public class ShopTestSuit extends BaseTestSuit {
         ShopPage shopPage = new ShopPage(driver);
 
         shopPage.getProduct(p->p.getStar()==2).clickBuyButton();
-        assertEquals("1", shopPage.getCartCount());
+        assertEquals(1, shopPage.getCartCount());
     }
 }

@@ -2,9 +2,11 @@ package com.planittesting.automation.model.pages;
 
 import com.planittesting.automation.model.dialogs.RemoveItemDialog;
 import com.planittesting.automation.model.ui.Table;
+import com.planittesting.automation.tests.cucumber.JUnitTests.DeliveryPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class CartPage extends BasePage{
@@ -45,7 +47,14 @@ public class CartPage extends BasePage{
         table.setValue("Item", item, "Quantity" ,String.valueOf(quantity));
     }
 
-    public void clickCheckOutButton() {
+    public DeliveryPage clickCheckOutButton() {
         driver.findElement(By.className("btn-success")).click();
+        return new DeliveryPage(driver);
+    }
+
+    public String getSuccessfulMessage() {
+        String successfulMessage = new WebDriverWait(driver, 60)
+                .until(ExpectedConditions.presenceOfElementLocated(By.className("alert-success"))).getText();
+        return successfulMessage.substring(0, successfulMessage.indexOf(","));
     }
 }

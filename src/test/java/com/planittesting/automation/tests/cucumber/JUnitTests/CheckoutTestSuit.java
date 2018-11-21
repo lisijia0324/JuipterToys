@@ -1,11 +1,12 @@
 package com.planittesting.automation.tests.cucumber.JUnitTests;
 
-
 import com.planittesting.automation.model.pages.CartPage;
 import com.planittesting.automation.model.pages.HomePage;
 import com.planittesting.automation.model.pages.ShopPage;
 import com.planittesting.automation.model.products.Product;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CheckoutTestSuit extends BaseTestSuit {
 
@@ -24,9 +25,16 @@ public class CheckoutTestSuit extends BaseTestSuit {
 
         shopPage.clickCartMenu();
         CartPage cartPage = new CartPage(driver);
-        cartPage.clickCheckOutButton();
+        DeliveryPage deliveryPage = cartPage.clickCheckOutButton();
 
+        deliveryPage.setForename("test");
+        deliveryPage.setEmail("test@test.com");
+        deliveryPage.setAddress("101 Test Ave");
+        deliveryPage.setCardType("Visa");
+        deliveryPage.setCardNumber("1234987612349876");
+        deliveryPage.clickSubmitButton();
 
-
+        assertEquals("Thanks test", cartPage.getSuccessfulMessage());
+        assertEquals(0, homePage.getCartCount());
     }
 }

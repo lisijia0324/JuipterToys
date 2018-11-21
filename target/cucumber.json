@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 4470734318,
+              "duration": 5440563384,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 4,
-        "name": "Successful login request",
+        "name": "Successful order selected product",
         "description": "",
-        "id": "login-page-tests;successful-login-request",
+        "id": "shop-page-and-cart-page-tests;successful-order-selected-product",
         "after": [
           {
             "result": {
-              "duration": 861556683,
+              "duration": 1356152933,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 838553736,
+              "duration": 431421425,
               "status": "passed"
             },
             "line": 5,
@@ -46,15 +46,15 @@
           },
           {
             "result": {
-              "duration": 28589185,
+              "duration": 384673236,
               "status": "passed"
             },
             "line": 6,
-            "name": "User sees the login account",
+            "name": "the user put order for selected product",
             "match": {
-              "location": "FeedbackSteps.userSeesTheLoginAccount()"
+              "location": "ShopSteps.theUserPutOrderForSelectedProduct()"
             },
-            "keyword": "Then "
+            "keyword": "When "
           }
         ],
         "tags": [
@@ -67,11 +67,11 @@
         ]
       }
     ],
-    "name": "Login Page Tests",
+    "name": "Shop Page and Cart Page Tests",
     "description": "",
-    "id": "login-page-tests",
+    "id": "shop-page-and-cart-page-tests",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/LoginFeature.feature",
+    "uri": "src/test/resources/features/ShopFeature.feature",
     "tags": []
   }
 ]

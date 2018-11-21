@@ -37,6 +37,7 @@ public abstract class BasePage {
     }
 
     public void clickCartMenu(){
-            driver.findElement(By.cssSelector("#nav-cart a")).click();
+        driver.findElement(By.cssSelector("#nav-cart a")).click();
     }
+
 }
