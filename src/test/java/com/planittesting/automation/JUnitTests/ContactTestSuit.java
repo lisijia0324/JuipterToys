@@ -1,4 +1,4 @@
-package com.planittesting.automation.tests.cucumber.JUnitTests;
+package com.planittesting.automation.JUnitTests;
 
 import com.planittesting.automation.model.pages.ContactPage;
 import com.planittesting.automation.model.pages.HomePage;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ContactPageTestSuit extends BaseTestSuit{
+public class ContactTestSuit extends BaseTestSuit {
 
     @Test
     public void validateErrorMessages(){

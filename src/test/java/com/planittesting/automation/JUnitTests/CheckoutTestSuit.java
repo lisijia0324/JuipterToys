@@ -1,6 +1,7 @@
-package com.planittesting.automation.tests.cucumber.JUnitTests;
+package com.planittesting.automation.JUnitTests;
 
 import com.planittesting.automation.model.pages.CartPage;
+import com.planittesting.automation.model.pages.DeliveryPage;
 import com.planittesting.automation.model.pages.HomePage;
 import com.planittesting.automation.model.pages.ShopPage;
 import com.planittesting.automation.model.products.Product;
@@ -33,7 +34,6 @@ public class CheckoutTestSuit extends BaseTestSuit {
         deliveryPage.setCardType("Visa");
         deliveryPage.setCardNumber("1234987612349876");
         deliveryPage.clickSubmitButton();
-
         assertEquals("Thanks test", cartPage.getSuccessfulMessage());
         assertEquals(0, homePage.getCartCount());
     }

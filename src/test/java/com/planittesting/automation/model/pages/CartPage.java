@@ -2,7 +2,6 @@ package com.planittesting.automation.model.pages;
 
 import com.planittesting.automation.model.dialogs.RemoveItemDialog;
 import com.planittesting.automation.model.ui.Table;
-import com.planittesting.automation.tests.cucumber.JUnitTests.DeliveryPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

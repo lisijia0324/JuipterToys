@@ -1,16 +1,13 @@
-package com.planittesting.automation.tests.cucumber.JUnitTests;
+package com.planittesting.automation.model.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class DeliveryPage {
-    protected WebElement rootElement;
-    protected  WebDriver driver;
+public class DeliveryPage extends BasePage {
 
     public DeliveryPage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
     public void setForename(String forename) {

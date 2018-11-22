@@ -1,4 +1,4 @@
-package com.planittesting.automation.tests.cucumber.JUnitTests;
+package com.planittesting.automation.JUnitTests;
 
 import com.planittesting.automation.model.pages.HomePage;
 import com.planittesting.automation.model.pages.ShopPage;

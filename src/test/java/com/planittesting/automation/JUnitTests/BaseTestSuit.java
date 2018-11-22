@@ -1,4 +1,4 @@
-package com.planittesting.automation.tests.cucumber.JUnitTests;
+package com.planittesting.automation.JUnitTests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
