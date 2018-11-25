@@ -5,7 +5,7 @@ public final class Constants {
         // restrict instantiation
     }
 
-    public static final String QA_PROPERTY_FILE_PATH = "src\\enviromentProperties\\qa.properties";
+    public static final String QA_PROPERTY_FILE_PATH = "src\\main\\resources\\environmentProperties\\qa.properties";
 
 
 }

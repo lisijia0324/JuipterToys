@@ -31,6 +31,7 @@ public class ShopSteps {
 
     @And("^the user checkout and submit order$")
     public void theUserCheckoutAndSubmitOrder() throws Throwable {
+
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }

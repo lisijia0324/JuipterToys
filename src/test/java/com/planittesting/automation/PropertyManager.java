@@ -17,6 +17,8 @@ public class PropertyManager {
             InputStream is = new FileInputStream(propertyFile);
             properties.load(is);
 
+            System.out.println(propertyFile);
+
             Set<Map.Entry<Object, Object>> entries = properties.entrySet();
             for(Map.Entry<Object, Object> entry: entries){
                 if (propertyKey.equals(entry.getKey())){

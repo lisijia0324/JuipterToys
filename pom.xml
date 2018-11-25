@@ -17,7 +17,8 @@
     <webdriver.chrome>C:\Users\lisij\Downloads\jar files\chromedriver_win32\chromedriver.exe</webdriver.chrome>
     <webdriver.ie>C:\Users\lisij\Downloads\jar files\IEDriverServer_Win32_3.14.0\IEDriverServer.exe</webdriver.ie>
     <webdriver.gecko>C:\Users\lisij\Downloads\jar files\geckodriver-v0.23.0-win32\geckodriver.exe</webdriver.gecko>
-    <browser>CHROME</browser>
+    <build.profile.id>qa</build.profile.id>
+    <browser>IE</browser>
   </properties>
 
   <dependencies>
@@ -53,7 +54,8 @@
       <artifactId>cucumber-junit</artifactId>
       <version>4.1.0</version>
       <scope>test</scope>
-    </dependency><!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-picocontainer</artifactId>
@@ -87,7 +89,8 @@
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
+      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -132,6 +135,7 @@
               <webdriver.gecko.driver>${webdriver.gecko}</webdriver.gecko.driver>
               <browser>${browser}</browser>
             </systemPropertyVariables>
+            <useFile>false</useFile>
             <includes>
               <include>**/*RunCucumberTest.java</include>
             </includes>
@@ -169,6 +173,9 @@
       </plugin>
       </plugins>
     </pluginManagement>
+      <filters>
+          <filter>${project.basedir}/src/main/resources/environmentProperties/${build.profile.id}.properties</filter>
+      </filters>
     <resources>
       <resource>
         <directory>src/main/resources/environmentProperties</directory>
