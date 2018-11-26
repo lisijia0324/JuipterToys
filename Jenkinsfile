@@ -20,7 +20,7 @@ pipeline{
         stage('Package stage'){
             steps{
                 echo 'This is Package stage'
-                bat 'mvn package'
+                bat 'mvn package -Denv=qa'
                 cucumber fileIncludePattern: '**/*.json'
             }
         }
