@@ -18,7 +18,7 @@
     <webdriver.ie>C:\Users\lisij\Downloads\jar files\IEDriverServer_Win32_3.14.0\IEDriverServer.exe</webdriver.ie>
     <webdriver.gecko>C:\Users\lisij\Downloads\jar files\geckodriver-v0.23.0-win32\geckodriver.exe</webdriver.gecko>
     <!--<build.profile.id>qa</build.profile.id>-->
-    <browser>IE</browser>
+    <browser>CHROME</browser>
   </properties>
 
   <dependencies>
